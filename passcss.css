@@ -1,0 +1,162 @@
+
+.layerTwo {
+	position: relative;
+	/* top: 40%; */
+	left: 20%;
+	/* transform: translate(-50%, -50%); */
+}
+@media only screen and (max-width: 700px) {
+    .layerTwo{
+        left:0%;
+    }
+}
+
+
+
+
+.inputBox {
+}
+
+.outerLayer {
+}
+
+#inputpw {
+	font-size: xx-large;
+	width: 100%;
+	background-color: black;
+	color: white;
+	animation-duration: 0.5s;
+}
+
+.shakeThing {
+	background-color: black;
+	color: white;
+	animation-name: shake;
+}
+
+.shakeThing1 {
+	background-color: black;
+	color: white;
+	animation-name: shake1;
+}
+
+#inputpw2 {
+}
+
+#hint {
+	font-size: xx-large;
+	font-family: Sans-Serif;
+	word-break: break-all;
+	color: white;
+}
+
+#decrypted {
+	font-family: Sans-Serif;
+	word-break: break-all;
+	color: white;
+}
+
+.layerOne {
+}
+
+.layerTwo {
+}
+
+.layerThree {
+}
+
+#encrypted {
+	display: none;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+
+	10% {
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+
+	20% {
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+
+	30% {
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+
+	50% {
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+
+	60% {
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+
+	70% {
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+
+	90% {
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
+
+@keyframes shake1 {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+
+	10% {
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+
+	20% {
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+
+	30% {
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+
+	50% {
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+
+	60% {
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+
+	70% {
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+
+	90% {
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
+}
