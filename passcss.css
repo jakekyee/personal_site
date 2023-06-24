@@ -15,14 +15,17 @@
 
 
 .inputBox {
+	padding:0px 0px;
 }
 
+
+
 .outerLayer {
-}
+} 	
 
 #inputpw {
 	font-size: xx-large;
-	width: 100%;
+	width: calc(100% - 7.1px);
 	background-color: black;
 	color: white;
 	animation-duration: 0.5s;

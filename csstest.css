@@ -1,8 +1,34 @@
 :root {
   --fontcolor: #e8dede;
+
   --linkcolor:#e8991a;
   --bgcolor:#0d0d0d;
 }
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fontcolor); 
+  border-radius: 10px;
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+  background: whitesmoke; 
+} */
+
+
+
+
+
+
 
 
 
