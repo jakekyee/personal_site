@@ -6,6 +6,36 @@
   <title>jakeyee</title>
   <link rel="stylesheet" href="csstest.css"> 
   <link rel="stylesheet" href="passcss.css"> 
+  <style>
+@font-face {
+  font-family: 'tictactoe';
+  src: url('tictactypo.otf');
+}
+
+
+
+
+    input[type="text"] {
+      font-family: "tictactoe";
+      position:relative;
+      font-size: 400px;
+    width: 400px;
+    height: 400px;
+      text-align: center;
+      left: 20%;
+      color:var(--fontcolor);
+      background-color:var(--bgcolor);
+    }
+
+    @media only screen and (max-width: 700px) {
+      input[type="text"] {
+
+      left: 0%;
+    }
+    }
+
+
+  </style>
 </head>
 <body>
 <!-- 
@@ -27,14 +57,127 @@
     <h3>Play a game in a font</h3>
     <hr>
     <span>
-      <p>Jake Yee is an undergraduate student currently studying Computer Science.</p> 
+      
       <br>
+      <input type = "text" autofocus>
       <p> </p>
 
     </span>
     <br>
+    <br>
+    <p> </p>
+    <hr>
+    <div class = "dotline"></div>
+  </div>
 
-    <a class = "links" href = ""style="width:100%; text-align: right;  display:inline-block;">Read More >></a>
+
+
+  <div class = "middlebit">
+    <div class = "dotline"></div>
+    <h1>How to play</h1>
+    <h3>It's complicated because I didn't think it through</h3>
+    <hr>
+    <span>
+
+      <br>
+      <p>Tic-Tac-Typo is an implementation of a tic-tac-toe bot contained entirely within a font.</p> 
+      <br>
+      <br>
+      <p>To start playing, type a "+" into the text box above. This will start the game, and let the font, playing as X, make the first move. You will be playing as Os, and will be going second.</p>
+      <br>
+      <br>
+      <br>
+      <img src="media/tictacinstructions.png" style="display: block;height: 300px; width:300px; margin-left:auto; margin-right:auto;">
+      <p class="caption"> A hastily drawn diagram of an empty tic-tac-toe board. Each box has been labeled with a single number, starting with one in the bottom left to nine in the top right.</p>
+      <br>
+      <br>
+      <p> To make your move, enter the number corresponding to the box that you wish to play in as seen in the picture above. The font will make its move immediately after.</p>
+      <br>
+      <br>
+      <p> To reset the game, simply press backspace until the game is reset, before pressing "+" to start a new game.</p>
+    </span>
+    <br>
+
+    <a class = "links" href = "https://github.com/jakekyee/TicTacTypo" style="width:100%; text-align: right;  display:inline-block;">Read More >></a>
+    <br>
+    <p> </p>
+    <hr>
+    <div class = "dotline"></div>
+  </div>
+
+
+  <div class = "middlebit">
+    <div class = "dotline"></div>
+    <h1>FAQ</h1>
+    <h3>Questions that have been frequently asked</h3>
+    <hr>
+    <span>
+
+      <br>
+      <p>Q: How does this work?</p> 
+      <br>
+      <p> A: Ligatures. And tears. Lots of tears. This took way more work than it should have.</p>
+      <br>
+      <br>
+      <p>Q: Why are the Xs pluses and the Os squares?</p> 
+      <br>
+      <p>A: It's an aesthetic choice. I also got lazy and didn't read the documentation for generating font files. Instead, I thought it would be easier to hand write the glyphs themselves as ttx files.</p>
+      <pre>
+
+          155 776 rmoveto
+          -300 -10 300 vlineto
+          -145 -776 rmoveto
+          300 631 rmoveto
+          -10 -300 10 vlineto
+          0 -631 rmoveto
+          498 776 rmoveto
+          -300 -10 300 vlineto
+          -488 -776 rmoveto
+          643 631 rmoveto
+          -10 -300 10 vlineto
+          -343 -631 rmoveto
+          831 776 rmoveto
+          -300 -10 300 vlineto
+          -821 -776 rmoveto
+          976 631 rmoveto
+          -10 -300 10 vlineto
+          -676 -631 rmoveto
+          643 443 rmoveto
+          -300 -300 300 vlineto
+          -343 -443 rmoveto
+          976 443 rmoveto
+          -300 -300 300 vlineto
+          -676 -443 rmoveto
+          343 800 rmoveto
+          -1000 -20 1000 vlineto
+          -323 -800 rmoveto
+          676 800 rmoveto
+          -1000 -20 1000 vlineto
+          -656 -800 rmoveto
+          1000 476 rmoveto
+          -20 -1000 20 vlineto
+          0 -476 rmoveto
+          1000 143 rmoveto
+          -20 -1000 20 vlineto
+          0 -143 rmoveto
+          endchar
+
+      </pre>
+
+      <p> This was a bad idea. I didn't realize that they used a relative cursor, like in python turtle graphics until I was already committed, and that I had greatly underestimated how fast I could create these things. To add rounded edges, or even diagonal lines would have been outside of the limits of my patience. I can do the mental math needed for perfect squares and crosses. Perfect curves and diagonal lines are way harder and there was no way I would have been able to do them in my head, so I made the executive decision to have a simplified look. </p>
+      <br>
+      <br>
+      <p> TL;DR : Bad decisions and doubling down.</p>
+      <br>
+      <br>
+
+      <p> Q: Can I download it to try it out myself?</p>
+      <br>
+      <p> A: Yes. The files can be downloaded by clicking <a href = "TicTacTypo.otf" download>here</a>, or from my github page.</p>
+    </span>
+    <br>
+
+    <a class = "links" href = "https://github.com/jakekyee/TicTacTypo" style="width:100%; text-align: right;  display:inline-block;">Read More >></a>
     <br>
     <p> </p>
     <hr>
