@@ -1,9 +1,18 @@
 :root {
   --fontcolor: #e8dede;
-
   --linkcolor:#e8991a;
   --bgcolor:#0d0d0d;
+  --altbgcolor:#d3d3d3;
+  --monospace: 
 }
+
+@font-face {
+  font-family: 'test';
+  /* src: url('B612Mono-Regular.ttf'); */
+}
+
+
+
 
 
 ::-webkit-scrollbar {
@@ -32,18 +41,43 @@
 
 
 
-@font-face {
-    font-family: 'robotomono';
-    src: url('RobotoMono-Regular.ttf');
-  }
+pre {
+
+  position:relative;
+    /* display: block; */
+  background: var(--altbgcolor);
+
+  border: 1px solid #ddd;
+  border-left: 3px solid var(--linkcolor);
+  border-radius: 3px;
+  color: var(--bgcolor);
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+
+  word-wrap: break-word;
+  left:20%;
+}
+
 hr {
   position:relative;
   left:20%;
   visibility: visible;
 }
 
+a {
+  font-family: monospace;
+  color: var(--linkcolor);
+}
+
 .links {
-  font-family: 'robotomono';
+  font-family: monospace;
   color: var(--linkcolor);
   margin-left: 0px;
   margin-top: 0px;
@@ -63,7 +97,7 @@ hr {
 
 
 p{
-  font-family: 'robotomono';
+  font-family: monospace;
   color: var(--fontcolor);
   margin-left: 0px;
   margin-top: 0px;
@@ -81,7 +115,7 @@ p{
 }
 
 h1{
-  font-family: 'robotomono';
+  font-family: monospace;
   color: var(--fontcolor);
   margin-left: 0px;
   margin-top: 0px;
@@ -97,7 +131,7 @@ h1{
   1px 1px 0 #000;
 }
  h3{
-  font-family: 'robotomono';
+  font-family: monospace;
   color: var(--fontcolor);
   margin-left: 0px;
   margin-top: 0px;
@@ -114,7 +148,7 @@ h1{
 }
 
 b {
-  font-family: 'robotomono';
+  font-family: monospace;
   color: var(--fontcolor);
   margin-left: 0px;
   margin-top: 0px;
@@ -262,7 +296,7 @@ body {
   position: relative;
   margin-left: auto;
   margin-right: none;
-  display: inline-block;
+  display: block;
 }
 
 
@@ -282,7 +316,7 @@ background-size:100% 100%;
 }
 
 .projectblock p {
-  font-family: 'robotomono';
+  font-family: monospace;
   color: var(--fontcolor);
   margin-left: 0px;
   margin-top: 0px;
@@ -296,7 +330,7 @@ background-size:100% 100%;
 }
 
 .projectblock b {
-  font-family: 'robotomono';
+  font-family: monospace;
   color: var(--fontcolor);
   margin-left: 0px;
   margin-top: 0px;
@@ -364,7 +398,9 @@ hr {
     left: 0%;
   }
 
-
+  .dotline{
+  left:10%;
+  }
 
 .middlebit {
   left:0%;
