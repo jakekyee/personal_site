@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>    
+    </script>
+    <meta charset="UTF-8">
+    <title>The Leafderboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>The Leafderboard</h1>
+  </head>
+  <body onload = "testtestThing();topPeople();" onload = "" style = "background-color: #5ADE86;">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .podium {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            height:80vh
+        }
+        .podium2 {
+            display: none;
+
+        }
+        .person {
+            flex: 1;
+            padding: 20px;
+            max-width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .person img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .name {
+            font-size:36px;
+        }
+        .rank {
+            font-size: 24px;
+        }
+
+        .score {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .person1 { /* Style for Person 1 */
+            background-color: #ffd700; /* Yellow background for emphasis */
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .person1 .rank {
+            font-size: 32px; /* Larger font size for emphasis */
+        }
+
+
+
+        h1 {
+            text-align: center; font-size: 10vh; font-family: monospace;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center; font-size: 5vh; font-family: monospace;
+
+            }
+            .person {
+                flex: 1;
+                max-width: 100%;
+            }
+
+            .person1 {
+                flex: 1;
+                max-width: 100%;
+                order:3
+            }
+            .podium {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="podium">
+        <div class="person">
+            <img style= "height:280px;width:280px;image-rendering:pixelated;"src="https://raw.githubusercontent.com/tempjky/testtesttset/main/number2.png">
+            <div class="name" id = "name2">1st</div>
+            <div class="rank">2nd</div>
+            <div class="score" id = "score2">Score: 90</div>
+        </div>
+        <div class="person person1"> <!-- Add person1 class -->
+            <img style= "height:280px;width:280px;image-rendering:pixelated;"src="https://raw.githubusercontent.com/tempjky/testtesttset/main/number1.png">
+            <div class="name" id = "name1"></div>
+            <div class="rank">1st</div>
+            <div class="score" id = "score1">Score: 95</div>
+        </div>
+        <div class="person">
+            <img style= "height:280px;width:280px;image-rendering:pixelated;"src="https://raw.githubusercontent.com/tempjky/testtesttset/main/number3.png">
+            <div class="name" id = "name3"></div>
+            <div class="rank">3rd</div>
+            <div class="score" id = "score3">Score: 85</div>
+        </div>
+
+    </div>
+
+
+    <div id = "test1"></div>    
+    <div id = "test2"></div>
+    </body>
+<script src="https://cdn.jsdelivr.net/gh/tempjky/testtesttset@main/appendStuff.js">
+</script>
+<style>
+/* Apply a fixed width to table columns */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Set a fixed width for each column */
+th, td {
+  width: 25%; /* You can adjust this width as needed */
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+/* Style the table header (optional) */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Style the table rows */
+tr:nth-child(even) {
+  background-color: #5ADE86;
+}
+
+tr:nth-child(odd) {
+  background-color: #2a9149;
+}
+
+/* Style table cells (TDs) */
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Add some spacing to the table rows and cells */
+td, th {
+  padding: 10px;
+}
+
+/* Add some borders to the table for separation */
+table, th, td {
+  border: 1px solid #aaa;
+}
+
+/* Make the table responsive on smaller screens */
+
+</style>
+</html>
