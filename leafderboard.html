@@ -4,9 +4,9 @@
     <script>    
     </script>
     <meta charset="UTF-8">
-    <title>The Leafderboard</title>
+    <title>The Leafderboard🍃</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <h1>The Leafderboard</h1>
+    <h1 style="white-space:nowrap">The Leafderboard🍃</h1>
   </head>
   <body onload = "testtestThing();topPeople();" onload = "" style = "background-color: #5ADE86;">
     <style>
@@ -32,6 +32,11 @@
             max-width: 300px;
             margin: 10px;
             text-align: center;
+            border-radius: 8px;
+            padding: 30px;
+           
+            background-color:#53bcfd;
+            /* background-color: #555; */
         }
 
         .person img {
@@ -52,7 +57,8 @@
         }
 
         .person1 { /* Style for Person 1 */
-            background-color: #ffd700; /* Yellow background for emphasis */
+            /* background-color: #ffd700; */
+            background-color:#53bcfd
             border-radius: 8px;
             padding: 30px;
             text-align: center;
@@ -75,18 +81,21 @@
             .person {
                 flex: 1;
                 max-width: 100%;
+                border-width: 2px;
+                border-color:#FFF;
             }
 
             .person1 {
                 flex: 1;
                 max-width: 100%;
-                order:3
+                order:1
             }
             .podium {
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap-reverse;
+            margin-top:400px;
 
         }
         }
@@ -96,25 +105,26 @@
 
     <div class="podium">
         <div class="person">
-            <img style= "height:280px;width:280px;image-rendering:pixelated;"src="https://raw.githubusercontent.com/tempjky/testtesttset/main/number2.png">
+            <img style= "object-fit:cover;height:280px;width:280px;image-rendering:pixelated;"src="https://raw.githubusercontent.com/tempjky/testtesttset/main/number2.png">
             <div class="name" id = "name2">1st</div>
             <div class="rank">2nd</div>
             <div class="score" id = "score2">Score: 90</div>
         </div>
         <div class="person person1"> <!-- Add person1 class -->
-            <img style= "height:280px;width:280px;image-rendering:pixelated;"src="https://raw.githubusercontent.com/tempjky/testtesttset/main/number1.png">
+            <img style= "object-fit: cover;height:280px;width:280px;image-rendering:pixelated;"src="https://raw.githubusercontent.com/tempjky/testtesttset/main/number1.png">
             <div class="name" id = "name1"></div>
             <div class="rank">1st</div>
             <div class="score" id = "score1">Score: 95</div>
         </div>
         <div class="person">
-            <img style= "height:280px;width:280px;image-rendering:pixelated;"src="https://raw.githubusercontent.com/tempjky/testtesttset/main/number3.png">
+            <img style= "object-fit:cover;height:280px;width:280px;image-rendering:pixelated;"src="https://raw.githubusercontent.com/tempjky/testtesttset/main/number3.png">
             <div class="name" id = "name3"></div>
             <div class="rank">3rd</div>
             <div class="score" id = "score3">Score: 85</div>
         </div>
 
     </div>
+
 
 
     <div id = "test1"></div>    
