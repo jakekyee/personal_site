@@ -358,6 +358,12 @@ background-size:100% 100%;
 
 
 @media only screen and (max-width: 700px) {
+
+pre {
+  left:0%;
+}
+
+
 hr {
   left:0%;
 
