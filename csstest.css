@@ -20,12 +20,12 @@
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px orange; 
   border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--fontcolor); 
+  background: var(--linkcolor); 
   border-radius: 10px;
 }
 
