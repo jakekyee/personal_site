@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLEASEPLEASEPLEASEPLEASE</title>
+  <link rel="stylesheet" href="csstest.css"> 
+  <!-- <link rel="stylesheet" href="passcss.css">  -->
+  <style>
+
+
+
+  .middlebit {
+    /* height:100vh; */
+  /* width: min(max(50vw, 600px),100%); */
+
+    width: min(max(25vw, 400px),30%);
+    /* min-width: 600px; */
+    /* max-width: 1000px; */
+    background-color: var(--bgcolor);
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    left: 20%;
+  }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      left:20%;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.3s ease-in-out; /* Faster transition for snappier feel */
+    }
+
+    .carousel img {
+      flex-shrink: 0;
+      width: 100%; /* Ensure images take full width of the container */
+      left:0;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 10;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+@media only screen and (max-width: 600px) {
+  .middlebit {
+    /* height:100vh; */
+    width: min(max(50vw, 600px),100%);
+    /* min-width: 600px; */
+    /* max-width: 1000px; */
+    background-color: var(--bgcolor);
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    left:0;
+
+  }
+
+.carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      left:0;
+
+    }
+
+
+.carousel img {
+      flex-shrink: 0;
+      width: 100%; /* Ensure images take full width of the container */
+
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="middlebit">
+    <img src="media/dstre-min.png">
+    <img src="media/date/1.png">
+    <img src="media/date/2.png">
+    <img src="media/date/3.png">
+    <img src="media/date/4.png">
+    <img src="media/date/5.png">
+
+    <!-- Carousel 1 -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="media/date/5-1.png">
+        <img src="media/date/5-2.png">
+        <img src="media/date/5-3.png">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+    <!-- Carousel 2 -->
+    <img src="media/date/6.png">
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="media/date/6-1.png">
+        <img src="media/date/6-2.png">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const carousels = document.querySelectorAll(".carousel-container");
+
+      carousels.forEach((container) => {
+        let currentIndex = 0;
+        const carousel = container.querySelector(".carousel");
+        const images = carousel.querySelectorAll("img").length;
+        let isDragging = false;
+        let startX, initialTranslate;
+
+        // Initialize container width
+        const containerWidth = container.offsetWidth;
+
+        // Button controls
+        const prevButton = container.querySelector(".prev");
+        const nextButton = container.querySelector(".next");
+
+        prevButton.addEventListener("click", (e) => {
+          e.stopPropagation(); // Prevent event from bubbling to container
+          moveSlide(-1);
+        });
+        nextButton.addEventListener("click", (e) => {
+          e.stopPropagation(); // Prevent event from bubbling to container
+          moveSlide(1);
+        });
+
+        // Touch events
+        container.addEventListener("touchstart", (e) => {
+          if (!e.target.classList.contains("carousel-btn")) {
+            startDrag(e);
+          }
+        });
+        container.addEventListener("touchmove", drag);
+        container.addEventListener("touchend", endDrag);
+
+        // Mouse events
+        container.addEventListener("mousedown", (e) => {
+          if (!e.target.classList.contains("carousel-btn")) {
+            startDrag(e);
+          }
+        });
+        
+        function moveSlide(direction) {
+          currentIndex = Math.max(0, Math.min(currentIndex + direction, images - 1));
+          updatePosition();
+        }
+
+        function startDrag(e) {
+          e.preventDefault();
+          isDragging = true;
+          startX = (e.touches ? e.touches[0].clientX : e.clientX);
+          initialTranslate = currentIndex * -containerWidth;
+          carousel.style.transition = 'none';
+          
+          if (!e.touches) {
+            document.addEventListener("mousemove", drag);
+            document.addEventListener("mouseup", endDrag);
+          }
+        }
+
+        function drag(e) {
+          if (!isDragging) return;
+          const currentX = (e.touches ? e.touches[0].clientX : e.clientX);
+          const deltaX = currentX - startX;
+          const newTranslate = initialTranslate + deltaX;
+          
+          carousel.style.transform = `translateX(${newTranslate}px)`;
+        }
+
+        function endDrag(e) {
+          if (!isDragging) return;
+          isDragging = false;
+          carousel.style.transition = 'transform 0.3s ease-in-out';
+
+          const currentX = (e.changedTouches ? e.changedTouches[0].clientX : e.clientX);
+          const deltaX = currentX - startX;
+          const velocity = deltaX / containerWidth;
+
+          // Determine snap direction based on drag distance and velocity
+          if (Math.abs(velocity) > 0.1) {
+            velocity > 0 ? moveSlide(-1) : moveSlide(1);
+          } else {
+            currentIndex = Math.round(-parseInt(carousel.style.transform.split('(')[1]) / containerWidth);
+            currentIndex = Math.max(0, Math.min(currentIndex, images - 1));
+            updatePosition();
+          }
+
+          // Cleanup mouse listeners
+          if (!e.touches) {
+            document.removeEventListener("mousemove", drag);
+            document.removeEventListener("mouseup", endDrag);
+          }
+        }
+
+        function updatePosition() {
+          carousel.style.transform = `translateX(${-currentIndex * containerWidth}px)`;
+        }
+
+        // Initialize the carousel position
+        updatePosition();
+      });
+    });
+  </script>
+</body>
+</html>
