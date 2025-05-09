@@ -60,7 +60,7 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1em 1.5em;
-
+  white-space: pre-wrap; 
   word-wrap: break-word;
   left:20%;
 }
