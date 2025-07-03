@@ -1,7 +1,10 @@
 :root {
   --fontcolor: #e8dede;
   --linkcolor:#e8991a;
+  --color3:#1a73e8;
+
   --bgcolor:#0d0d0d;
+  --bgcolor2:#181818;
   --altbgcolor:#d3d3d3;
   /* --monospace:  */
 }
@@ -210,6 +213,23 @@ body {
   border-left: 3px dotted var(--fontcolor);
 }
 
+
+.startbit {
+  height:80vh;
+  /* width: min(max(50vw, 600px),100%); */
+  /* min-width: 600px; */
+  /* max-width: 1000px; */
+  /* background-color: var(--bgcolor); */
+  background-color: var(--bgcolor2);
+
+  
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  /* left: 20%; */
+}
 
 
 .topbit {
@@ -504,5 +524,5 @@ https://oudkee.neocities.org/tutorials/tutcrt
   opacity: 0;
   z-index: 2;
   pointer-events: none;
-  animation: flicker 1000s infinite;
+  animation: flicker 100000s infinite;
 }
