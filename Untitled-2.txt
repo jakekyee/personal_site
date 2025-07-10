@@ -1,0 +1,17 @@
+# $t = Get-Content C:\Users\srv-orbit\Downloads\specify_a_filename.csv
+$t = Get-Content C:\Users\JYee\Desktop\specify_a_filename.csv
+
+$final = ""
+foreach ($line in $t) {
+
+    $splitline = $line.split(",")
+    foreach ($cell in $splitline){
+        $final = $final + $cell
+        $final = $final + "`t"
+    }
+    $final = $final + "`r`n"
+    # $final = $final + "'" 
+    # $final = $final + $thing 
+}
+
+Set-Clipboard $final
