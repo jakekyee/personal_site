@@ -16,8 +16,6 @@
 
 
 
-
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -40,12 +38,7 @@
 
 
 
-
-
-
-
-pre {
-
+.codeblock {
   position:relative;
     /* display: block; */
   background: var(--altbgcolor);
@@ -67,6 +60,31 @@ pre {
   word-wrap: break-word;
   left:20%;
 }
+
+
+
+/* pre {
+
+  position:relative;
+  background: var(--altbgcolor);
+
+  border: 1px solid #ddd;
+  border-left: 3px solid var(--linkcolor);
+  border-radius: 3px;
+  color: var(--bgcolor);
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  white-space: pre-wrap; 
+  word-wrap: break-word;
+  left:20%;
+} */
 
 hr {
   position:relative;
@@ -97,6 +115,27 @@ a {
   1px 1px 0 #000;
 
 } 
+
+.readmore {
+  width:100%; 
+  text-align: right;  
+  display:inline-block;
+  font-family: monospace;
+  color: var(--linkcolor);
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-right: 0px;
+  position: relative;
+  font-size: 150%;
+  display: inline-block;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
 
 
 p{
@@ -221,8 +260,6 @@ body {
   /* max-width: 1000px; */
   /* background-color: var(--bgcolor); */
   background-color: var(--bgcolor2);
-
-  
   margin-left: 0px;
   margin-top: 0px;
   margin-right: 0px;
